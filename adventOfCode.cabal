@@ -1,0 +1,86 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 34ffd025b491fbc3dc0350c20f81289c5e613a633dc493cca21fd353e06ad04f
+
+name:           adventOfCode
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/adventOfCode#readme>
+homepage:       https://github.com/githubuser/adventOfCode#readme
+bug-reports:    https://github.com/githubuser/adventOfCode/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/adventOfCode
+
+library
+  exposed-modules:
+      Day1
+      Day1_2
+      Day2
+      Day25_1
+      Day2_1
+      Day2_2
+      Day3_1
+      Day4_1
+      Day5_1
+      Day6_1
+      Day7_1
+      Day7_2
+      Day8_1
+      Lib
+  other-modules:
+      Paths_adventOfCode
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers >=0.6.0.1 && <1
+    , lens >=4.1.7 && <5
+    , megaparsec >=7.0.4 && <8
+    , text >=1.2.3.1 && <2
+  default-language: Haskell2010
+
+executable adventOfCode-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_adventOfCode
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventOfCode
+    , base >=4.7 && <5
+    , containers >=0.6.0.1 && <1
+    , lens >=4.1.7 && <5
+    , megaparsec >=7.0.4 && <8
+    , text >=1.2.3.1 && <2
+  default-language: Haskell2010
+
+test-suite adventOfCode-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_adventOfCode
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventOfCode
+    , base >=4.7 && <5
+    , containers >=0.6.0.1 && <1
+    , lens >=4.1.7 && <5
+    , megaparsec >=7.0.4 && <8
+    , text >=1.2.3.1 && <2
+  default-language: Haskell2010

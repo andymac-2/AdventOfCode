@@ -1,0 +1,5 @@
+.DS_sotre
+/.stack-work/
+*.o
+*~
+*.hi
