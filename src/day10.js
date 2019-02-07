@@ -388,6 +388,7 @@ var StarView = function (numberInput, display) {
     this.input = numberInput
 
     this.input.addEventListener("input", this.update.bind(this));
+    this.update()
 };
 StarView.prototype.update = function () {
     var val = this.input.value;

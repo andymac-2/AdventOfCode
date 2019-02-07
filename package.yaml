@@ -25,6 +25,7 @@ dependencies:
 - megaparsec >= 7.0.4 && < 8
 - containers >= 0.6.0.1 && < 1
 - lens >= 4.1.7 && < 5
+- memoize >= 0.8.0 && < 1
 
 library:
   source-dirs: src
