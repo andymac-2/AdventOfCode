@@ -6,7 +6,7 @@ Considering that it's the first day, this problem is pretty simple.
 
 Given a list of signed decimal integers in a text file, find their sum. Our input file looks somthing like so:
 
-```haskell
+```
 +5
 -11
 -1
