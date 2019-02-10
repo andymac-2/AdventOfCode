@@ -14,9 +14,11 @@ main = do
     T.interact (T.pack . show . process . parseFile)
     putStrLn ""
 
+-- part 1
 process :: (Gen, [Rule]) -> Int
-process (gen, rs) = value . (!! 101) . generations rs $ gen
+process (gen, rs) = value . (!! 20) . generations rs $ gen
 
+-- part 1
 --process :: (Gen, [Rule]) -> String
 --process (gen, rs) = unlines . fmap show . take 100 . generations rs $ gen
 
@@ -32,6 +34,7 @@ instance Show Plant where
 type Rule = [Plant]
 
 -- Generation class
+-- Gen offset plantsList
 data Gen = Gen Int [Plant]
 
 instance Show Gen where

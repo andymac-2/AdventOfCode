@@ -1,8 +1,10 @@
--- This file has been generated from package.yaml by hpack version 0.28.2.
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1dfda5f1e7217d47e35dfca51c06c5c7f1ee2f55659accfce087fff1f1b7b7a5
+-- hash: fb9e31fcd6badaea73c7db51b9ec767fa89ee94ff03d1222d5484d9d4c562b04
 
 name:           adventOfCode
 version:        0.1.0.0
@@ -15,10 +17,9 @@ copyright:      2018 Author name here
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
-cabal-version:  >= 1.10
 extra-source-files:
-    ChangeLog.md
     README.md
+    ChangeLog.md
 
 source-repository head
   type: git
@@ -28,6 +29,8 @@ library
   exposed-modules:
       Day1
       Day11
+      Day12
+      Day13
       Day1_2
       Day2
       Day25_1

@@ -1,13 +1,13 @@
 import Data.List
 
 main :: IO ()
-main = interact (show . checksumAll . concat . fmap checksum . lines)
+main = interact (show . checksumAll . fmap checksum . lines)
 
-uniq :: Ord a => [a] -> [a]
-uniq = fmap head . group . sort
+checksum :: Ord a => [a] -> (Bool, Bool)
+checksum l = (2 `elem` groupLengths, 3 `elem` groupLengths) where
+    groupLengths = fmap length . group . sort $ l
 
-checksum :: Ord a => [a] -> [Int]
-checksum = tail . uniq . fmap length . group . sort
-
-checksumAll :: [Int] -> Int
-checksumAll = product . fmap length . group . sort
+checksumAll :: [(Bool, Bool)] -> Int
+checksumAll l = pairs * triplets where
+    pairs = length . filter fst $ l
+    triplets = length . filter snd $ l
